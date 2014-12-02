@@ -3,12 +3,12 @@ InvalidEmailDetector
 
 A machine-learning approach to detect invalid emails without actually sending an email.
 
-Whether you use an external service for email sending (Amazon SES, Mailchimp...) or you do it yourself, you have to watch your bounce rate as your reputation highly depend on it.
-Amazon SES recommends a 5% bounce rate for example.
-Problem is: there is no way to know if an email address is valid... unless you send an email and watch for the bounce.
+Whether you use an external service for email sending (Amazon SES, Mailchimp...) or you do it yourself, you have to watch your bounce rate as your reputation highly depend on it.  
+Amazon SES recommends a 5% bounce rate for example.  
+Problem is: there is no way to know if an email address is valid... unless you send an email and watch for the bounce.  
 So if a large portion of your registered users use invalid email addresses, you are stuck!
 
-This project aims at solving, at least partially, this issue.
+This project aims at solving, at least partially, this issue.  
 A machine learning algorithm computes the probability of an email address to be valid given your historical data. This way, you can prioritize the recipients of your emails, being able to validate more users' emails (and send them additional emails later if need be).
 
 Two main operations are necessary:
@@ -33,7 +33,7 @@ var model2 = MaximumEntropyInvalidEmailDetector.TrainModel(inputFilePath, iterat
 - the use of the detector
 ```
 // use trained model to build a detector
-var invalidEmailDetector = new MaximumEntropyInvalidEmailDetector(model2);
+var invalidEmailDetector = new MaximumEntropyInvalidEmailDetector(model);
 
 // use the detector to compute the probability of invalidity of new email addresses
 var proba1 = invalidEmailDetector.GetInvalidProbability("john.doe@yopmail.com");
