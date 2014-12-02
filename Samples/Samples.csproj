@@ -32,6 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OpenNLP">
+      <HintPath>..\packages\OpenNLP.1.1.1\lib\net45\OpenNLP.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpEntropy">
+      <HintPath>..\packages\OpenNLP.1.1.1\lib\net45\SharpEntropy.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,7 +52,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Input\invalidEmailDetection.train" />
+    <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InvalidEmailDetector\InvalidEmailDetector.csproj">
+      <Project>{F37C2D59-2BD7-418D-8179-B37CE52967B8}</Project>
+      <Name>InvalidEmailDetector</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
