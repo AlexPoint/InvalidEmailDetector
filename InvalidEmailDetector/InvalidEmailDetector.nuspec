@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>InvalidEmailDetector</id>
+    <version>1.0.0</version>
+    <authors>AlexPoint</authors>
+    <owners>AlexPoint</owners>
+    <projectUrl>https://github.com/AlexPoint/InvalidEmailDetector</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A machine learning approach to detect invalid emails (without actually sending the email)</description>
+    <releaseNotes>First working version of invalid email detector.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>invalid email detection machine learning</tags>
+    <dependencies>
+      <dependency id="OpenNLP" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>
