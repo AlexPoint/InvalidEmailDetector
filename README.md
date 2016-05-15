@@ -13,7 +13,8 @@ A machine learning algorithm computes the probability of an email address to be 
 
 Two main operations are necessary:
 - the training of your model with historical data (through a well-formatted file or specific method)
-```
+
+```csharp
 var iterations = 100;
 var cut = 5;
 // train the model from a data set
@@ -31,7 +32,7 @@ var inputFilePath = currentDirectory + "Input/invalidEmailDetection.train";
 var model2 = MaximumEntropyInvalidEmailDetector.TrainModel(inputFilePath, iterations, cut);
 ```
 - the use of the detector
-```
+```csharp
 // use trained model to build a detector
 var invalidEmailDetector = new MaximumEntropyInvalidEmailDetector(model);
 
